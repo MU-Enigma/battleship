@@ -7,14 +7,20 @@ import Footer from './components/Footer.vue'
 
 <template>
 	<Header />
-	<div class="flex flex-col-reverse lg:flex-row lg:justify-between justify-center items-center landing home">
+	<div class="flex flex-col-reverse gap-12 lg:gap-0 lg:flex-row lg:justify-between justify-center items-center landing home">
 		<div class="lg:mx-52 mx-8 flex flex-col gap-2 lg:gap-5">
 			<h1 class="lg:text-5xl text-2xl font-bold">Enigma</h1>
 			<h2 class="lg:text-3xl text-xl">Battleship Challenge</h2>
 			<h3 class="lg:text-2xl text-lg font-thin">Fight your battles with artillery and code</h3>
 			<h2 class="lg:text-3xl text-xl">Jan 30 - Feb 6</h2>
+			<br>
+			<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+				<div class="lg:p-6 p-2 lg:w-60 w-32 flex justify-center uppercase lg:text-2xl text-base items-center lg:rounded-3xl rounded-xl text-white button cursor-pointer transform hover:scale-95 ease-in-out duration-300 shadow-md">
+					Submit entry
+				</div>
+			</a>
 		</div>
-		<img src="./assets/landing_bin.svg" class="w-0 lg:w-2/5 mr-32 select-none" />
+		<img src="./assets/landing_bin.svg" class="w-4/5 lg:w-2/5 lg:mr-32 select-none" />
 	</div>
 
 	<div id="about" class="h-screen flex flex-col-reverse lg:flex-row lg:justify-between justify-center items-center">
@@ -69,8 +75,9 @@ import Footer from './components/Footer.vue'
 				Got questions?<br>
 				Join our discord server and we'll be right with you.
 			</h2>
+			<br>
 			<a href="https://discord.gg/5eJwmkV">
-				<div class="mt-6 p-6 w-60 flex justify-center items-center rounded-3xl text-white button cursor-pointer transform hover:scale-95 ease-in-out duration-300 shadow-md">
+				<div class="p-6 w-60 flex justify-center items-center rounded-3xl text-white button cursor-pointer transform hover:scale-95 ease-in-out duration-300 shadow-md">
 					<img src="./assets/Discord-Logo+Wordmark-White.svg" >
 				</div>
 			</a>
