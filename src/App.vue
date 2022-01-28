@@ -8,7 +8,7 @@ import Footer from './components/Footer.vue'
 <template>
 	<Header />
 	<div class="flex flex-col-reverse lg:flex-row lg:justify-between justify-center items-center landing home">
-		<div class="mx-52 flex flex-col gap-2 lg:gap-5">
+		<div class="lg:mx-52 mx-8 flex flex-col gap-2 lg:gap-5">
 			<h1 class="lg:text-5xl text-2xl font-bold">Enigma</h1>
 			<h2 class="lg:text-3xl text-xl">Battleship Challenge</h2>
 			<h3 class="lg:text-2xl text-lg font-thin">Fight your battles with artillery and code</h3>
@@ -18,7 +18,7 @@ import Footer from './components/Footer.vue'
 	</div>
 
 	<div id="about" class="h-screen flex flex-col-reverse lg:flex-row lg:justify-between justify-center items-center">
-		<div class="mx-52 flex flex-col gap-2 lg:gap-8">
+		<div class="lg:mx-52 mx-8 flex flex-col gap-2 lg:gap-8">
 			<h1 class="lg:text-5xl text-2xl font-bold">Overview</h1>
 			<h3 class="lg:text-2xl text-lg font-thin">
 				A bot-coding tournament for all students of Mahindra University based on the game of <a href="https://en.wikipedia.org/wiki/Battleship_(game)" class="underline">Battleship</a>. 
@@ -30,7 +30,7 @@ import Footer from './components/Footer.vue'
 	</div>
 
 	<div id="prizes" class="h-screen flex flex-col-reverse lg:flex-row lg:justify-between justify-center items-center landing">
-		<div class="mx-52 flex flex-col gap-2 lg:gap-8">
+		<div class="lg:mx-52 mx-8 flex flex-col gap-2 lg:gap-8">
 			<h1 class="lg:text-5xl text-2xl font-bold">Prizes</h1>
 			<h3 class="lg:text-xl text-lg font-thin flex flex-col">
 				<span class="pb-4">Cash prizes will be transferred via UPI to the wallets of respective winners. <br>
@@ -44,9 +44,9 @@ import Footer from './components/Footer.vue'
 	</div>
 
 	<div id="rules" class="h-screen flex flex-col-reverse lg:flex-row lg:justify-between justify-center items-center">
-		<div class="mx-52 flex flex-col gap-2 lg:gap-8">
+		<div class="lg:mx-52 mx-8 flex flex-col gap-2 lg:gap-8">
 			<h1 class="lg:text-5xl text-2xl font-bold">Tournament rules</h1>
-			<ol class="lg:text-2xl text-lg font-thin flex flex-col list-decimal gap-4 ml-12"> 
+			<ol class="lg:text-2xl text-lg font-thin flex flex-col list-decimal gap-4 ml-6 lg:ml-12"> 
 				<li>Submission: Fixed size, no folders</li>
 				<li>Programming language to use Python3+ (without external libraries)</li>
 				<li>Team size: (1-5), People who have no team can join the team-making program.</li>
@@ -63,13 +63,17 @@ import Footer from './components/Footer.vue'
 	</div>
 
 	<div id="touch" class="h-screen flex flex-col-reverse lg:flex-row lg:justify-between justify-center items-center landing">
-		<div class="mx-52 flex flex-col gap-2 lg:gap-8">
+		<div class="lg:mx-52 mx-8 flex flex-col gap-2 lg:gap-8">
 			<h1 class="lg:text-5xl text-2xl font-bold">Get in Touch</h1>
 			<h2 class="lg:text-2xl text-lg font-thin flex flex-col">
 				Got questions?<br>
 				Join our discord server and we'll be right with you.
 			</h2>
-			<div class="p-6 w-52 flex justify-center items-center rounded-3xl text-white button font-sans text-xl cursor-pointer transform hover:scale-95 ease-in-out duration-300 shadow-md"><a href="https://discord.gg/5eJwmkV">Engima Discord</a></div>
+			<a href="https://discord.gg/5eJwmkV">
+				<div class="mt-6 p-6 w-60 flex justify-center items-center rounded-3xl text-white button cursor-pointer transform hover:scale-95 ease-in-out duration-300 shadow-md">
+					<img src="./assets/Discord-Logo+Wordmark-White.svg" >
+				</div>
+			</a>
 		</div>
 	</div>
 

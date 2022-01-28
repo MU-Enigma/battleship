@@ -11,7 +11,7 @@
 		</ul>
 		<div class="block lg:hidden" @click="overflow = !overflow">
 			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path d="M3 6H21V8H3V6ZM3 11H21V13H3V11ZM3 16H21V18H3V16Z" fill="white"/>
+				<path d="M3 6H21V8H3V6ZM3 11H21V13H3V11ZM3 16H21V18H3V16Z" fill="black"/>
 			</svg>
 		</div>
 	</header>
@@ -22,7 +22,7 @@
 				<span class="hover:underline transition ease-in-out duration-300 cursor-pointer" v-scroll-to="`#prizes`"><li>Prizes</li></span>
 				<span class="hover:underline transition ease-in-out duration-300 cursor-pointer" v-scroll-to="`#rules`"><li>Rules</li></span>
 				<span class="hover:underline transition ease-in-out duration-300 cursor-pointer" v-scroll-to="`#touch`"><li>Get in Touch</li></span>
-		</ul>
+			</ul>
 		</div>
 	</div>
 </template>
@@ -44,12 +44,12 @@ header {
 }
 
 .over-flow {
-	background: white;
+	background: rgba(256, 256, 256, 1);
 	margin-top: 64px;
-	height: calc(100vh - 64px);
+	height: calc(100vh - 72px);
 }
 
 .nav-scroll-bg {
-	background: white;
+	background: rgba(256, 256, 256, 1);
 }
 </style>
