@@ -7,7 +7,7 @@ import Footer from './components/Footer.vue'
 
 <template>
 	<Header />
-	<div class="flex flex-col-reverse gap-12 lg:gap-0 lg:flex-row lg:justify-between justify-center items-center landing home">
+	<div class="flex flex-col-reverse gap-12 lg:gap-0 lg:flex-row lg:justify-between justify-center items-center landing home min-h-screen">
 		<div class="lg:mx-52 mx-8 flex flex-col gap-2 lg:gap-5">
 			<h1 class="lg:text-5xl text-2xl font-bold">Enigma</h1>
 			<h2 class="lg:text-3xl text-xl">Battleship Challenge</h2>
@@ -15,7 +15,7 @@ import Footer from './components/Footer.vue'
 			<h2 class="lg:text-3xl text-xl">Jan 30 - Feb 6</h2>
 			<br>
 			<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-				<div class="lg:p-6 p-2 lg:w-60 w-32 flex justify-center uppercase lg:text-2xl text-base items-center lg:rounded-3xl rounded-xl text-white button cursor-pointer transform hover:scale-95 ease-in-out duration-300 shadow-md">
+				<div class="lg:p-6 p-2 lg:w-60 w-32 flex justify-center uppercase lg:text-2xl text-sm items-center lg:rounded-3xl rounded-xl text-white button cursor-pointer transform hover:scale-95 ease-in-out duration-300 shadow-md">
 					Submit entry
 				</div>
 			</a>
@@ -49,21 +49,49 @@ import Footer from './components/Footer.vue'
 		</div>
 	</div>
 
-	<div id="rules" class="h-screen flex flex-col-reverse lg:flex-row lg:justify-between justify-center items-center">
-		<div class="lg:mx-52 mx-8 flex flex-col gap-2 lg:gap-8">
+	<div id="rules" class="min-h-screen flex flex-col-reverse lg:flex-row lg:justify-between justify-center items-center">
+		<div class="lg:mx-52 mx-8 flex flex-col gap-2 lg:gap-8 my-24">
 			<h1 class="lg:text-5xl text-2xl font-bold">Tournament rules</h1>
-			<ol class="lg:text-2xl text-lg font-thin flex flex-col list-decimal gap-4 ml-6 lg:ml-12"> 
-				<li>Submission: Fixed size, no folders</li>
-				<li>Programming language to use Python3+ (without external libraries)</li>
-				<li>Team size: (1-5), People who have no team can join the team-making program.</li>
+			<ol class="lg:text-base text-lg font-thin flex flex-col list-decimal gap-4 ml-6 lg:ml-12"> 
+				<li>Every team is required to submit a single python file</li>
 				<li>
-					Game specifications:
+					The program should have a `class BattleShip` with the following member variables
 					<ul class="list-disc">
-						<li>Time limit: If you pass the time limit of x milliseconds your disqualified.</li>
-						<li>Board size: 10 x 10 grid</li>
-						<li>Special moves are applicable</li>
+						<li><span class="font-bold">team_name: str</span> - Name of your team</li>
+						<li><span class="font-bold">board : list(int)</span> - 2D list indicating the position of your ships</li>
+						<li><span class="font-bold">opponent_board</span> : list(int) - 2D list for tracking enemy ships</li>
+						<li><span class="font-bold">info : int</span> - Contains details about your attack</li>
 					</ul>
 				</li>
+				<li>
+					Member Functions:
+					<ul class="list-disc">
+						<li><span class="font-bold">set_board(self)</span> - Returns your 2D list of your ship</li>
+						<li><span class="font-bold">attack(self)</span> - Return a tuple of two integers. The two integers denotes the position of the board where you want to shoot.</li>
+						<li><span class="font-bold">hit_or_miss(self, x, y , info)</span> - Doesn't return anything.
+								x and y is the co-ordinate at which you hit the enemy board. `info` contains information about the state of your attack.
+								* If info = 1 , it means you have missed your shot.
+								* If info = 0 , it means you have hit an enemy ship
+								* If info = -1 , it means you have attempted to shoot at a place outside the dimensions of the enemy board
+								* If info = 2, it means you have availed `Nullify` special Shot (More on Special Shot later)
+								* If info = 3, it means you have availed `Missile Hawkeye Special Move`!</li>
+					</ul>
+				</li>
+				<li>You may create additional member variables/global variables and functions. But the `above member functions/variables are neccesary` without which you are disqualified and your opponent gets a walk-over</li>
+				<li>You are not allowed to import any third party libraries or import from the main game file. You can only use libraries found in Vanilla Python.</li>
+				<li>
+					Special Moves:<br>
+					In your opponent's board, two randomly selected tile/co-ordinates will be assigned with special spot. The special spot are always in one of the ships. So, when you hit this special part of the ship, you get to use one of the following special moves:
+					<ul class="list-disc">
+						<li><span class="font-bold">Nullify</span> : Pretty Self Explanatory. It nullifies your opponent's next chance and hence gives you double hit.</li>
+						<li><span class="font-bold">Missile Hawkeye</span> : When you activate missile hawkeye, the next time you hit any co-ordinate say (x,y) , you get to eliminate the entire row and column.</li>
+						Note : When you activate missile Hawkeye, the very next move is treated as your special attack.
+					</ul>
+				</li>
+				<li>The board dimensions are 10x10.</li>
+				<li>The following link redirects you to a <a href="https://github.com/MU-Enigma/BattleShip-BattleGround/blob/master/Battleship/example_submission/team1.py" class="underline">sample code</a> that every team is expected to submit.
+						You may use the same as a boiler plate for your code submission.</li>
+				<li>Know more about the classic <a href="https://www.youtube.com/watch?v=RY4nAyRgkLo" class="underline">BattleShip Game</a>.</li>
 			</ol>
 		</div>
 	</div>
