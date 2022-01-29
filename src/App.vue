@@ -7,14 +7,14 @@ import Footer from './components/Footer.vue'
 
 <template>
 	<Header />
-	<div class="flex flex-col-reverse gap-12 lg:gap-0 lg:flex-row lg:justify-between justify-center items-center landing home min-h-screen">
+	<div class="flex flex-col-reverse gap-12 lg:gap-0 lg:flex-row lg:justify-between justify-center items-center landing home">
 		<div class="lg:mx-52 mx-8 flex flex-col gap-2 lg:gap-5">
 			<h1 class="lg:text-5xl text-2xl font-bold">Enigma</h1>
 			<h2 class="lg:text-3xl text-xl">Battleship Challenge</h2>
 			<h3 class="lg:text-2xl text-lg font-thin">Fight your battles with artillery and code</h3>
 			<h2 class="lg:text-3xl text-xl">Jan 30 - Feb 6</h2>
 			<br>
-			<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+			<a href="https://github.com/MU-Enigma/BattleShip-BattleGround/tree/master/Battleship/Submissions">
 				<div class="lg:p-6 p-2 lg:w-60 w-32 flex justify-center uppercase lg:text-2xl text-sm items-center lg:rounded-3xl rounded-xl text-white button cursor-pointer transform hover:scale-95 ease-in-out duration-300 shadow-md">
 					Submit entry
 				</div>
@@ -68,13 +68,16 @@ import Footer from './components/Footer.vue'
 					<ul class="list-disc">
 						<li><span class="font-bold">set_board(self)</span> - Returns your 2D list of your ship</li>
 						<li><span class="font-bold">attack(self)</span> - Return a tuple of two integers. The two integers denotes the position of the board where you want to shoot.</li>
-						<li><span class="font-bold">hit_or_miss(self, x, y , info)</span> - Doesn't return anything.
+						<li><span class="font-bold">hit_or_miss(self, x, y , info)</span> - Doesn't return anything. <br>
 								x and y is the co-ordinate at which you hit the enemy board. `info` contains information about the state of your attack.
-								* If info = 1 , it means you have missed your shot.
-								* If info = 0 , it means you have hit an enemy ship
-								* If info = -1 , it means you have attempted to shoot at a place outside the dimensions of the enemy board
-								* If info = 2, it means you have availed `Nullify` special Shot (More on Special Shot later)
-								* If info = 3, it means you have availed `Missile Hawkeye Special Move`!</li>
+								<ul class="list-disc ml-4">
+									<li>If info = 1 , it means you have missed your shot.</li>
+									<li>If info = 0 , it means you have hit an enemy ship</li>
+									<li>If info = -1 , it means you have attempted to shoot at a place outside the dimensions of the enemy board</li>
+									<li>If info = 2, it means you have availed <span class="font-bold">Nullify</span> special Shot (More on Special Shot later)</li>
+									<li>If info = 3, it means you have availed <span class="font-bold">Missile Hawkeye Special Move</span>!</li>
+								</ul>
+						</li>
 					</ul>
 				</li>
 				<li>You may create additional member variables/global variables and functions. But the `above member functions/variables are neccesary` without which you are disqualified and your opponent gets a walk-over</li>
