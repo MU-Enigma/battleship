@@ -10,9 +10,9 @@ import Footer from './components/Footer.vue'
 	<div class="flex flex-col-reverse gap-12 lg:gap-0 lg:flex-row lg:justify-between justify-center items-center landing home dark:bg-slate-900 dark:text-white">
 		<div class="lg:mx-52 mx-8 flex flex-col gap-2 lg:gap-5">
 			<h1 class="lg:text-5xl text-2xl font-bold">Enigma</h1>
-			<h2 class="lg:text-3xl text-xl">Battleship Challenge</h2>
-			<h3 class="lg:text-2xl text-lg font-thin">Fight your battles with artillery and code</h3>
-			<h2 class="lg:text-3xl text-xl">Jan 30 - Feb 6</h2>
+			<h2 class="lg:text-2xl text-xl">Code Wars 0: Battleships</h2>
+			<h3 class="lg:text-xl text-lg font-thin">Fight your battles with artillery and code</h3>
+			<h2 class="lg:text-2xl text-xl">Jan 31 - Feb 7</h2>
 			<br>
 			<a href="https://github.com/MU-Enigma/BattleShip-BattleGround/tree/master/Battleship/Submissions">
 				<div class="lg:p-6 p-2 lg:w-60 w-32 flex justify-center uppercase lg:text-2xl text-sm items-center lg:rounded-3xl rounded-xl text-white button cursor-pointer transform hover:scale-95 ease-in-out duration-300 shadow-md">
@@ -23,8 +23,8 @@ import Footer from './components/Footer.vue'
 		<img src="./assets/landing_bin.svg" class="w-4/5 lg:w-2/5 lg:mr-32 select-none" />
 	</div>
 
-	<div id="about" class="h-screen flex flex-col-reverse lg:flex-row lg:justify-between justify-center items-center dark:bg-slate-800 dark:text-white">
-		<div class="lg:mx-52 mx-8 flex flex-col gap-2 lg:gap-8">
+	<div id="about" class="min-h-screen flex flex-col-reverse lg:flex-row lg:justify-between justify-center items-center dark:bg-slate-800 dark:text-white">
+		<div class="lg:mx-52 mx-8 flex flex-col gap-2 lg:gap-8 my-24">
 			<h1 class="lg:text-5xl text-2xl font-bold">Overview</h1>
 			<h3 class="lg:text-2xl text-lg font-thin">
 				A bot-coding tournament for all students of Mahindra University based on the game of <a href="https://en.wikipedia.org/wiki/Battleship_(game)" class="underline">Battleship</a>. 
@@ -41,7 +41,7 @@ import Footer from './components/Footer.vue'
 			<h3 class="lg:text-xl text-lg font-thin flex flex-col">
 				<span class="pb-4">Cash prizes will be transferred via UPI to the wallets of respective winners. <br>
 					In case the recipients do not have UPI wallets, an alternative would be arranged.</span>
-				<span>All certificates will be signed by Prafulla ma'am, the Club’s mentor</span><hr class="my-4 dark:border-slate-800">
+				<span>All certificates will be signed by Dr. Prafulla, the Club’s mentor</span><hr class="my-4 dark:border-slate-800">
 				<span>Winner: <span class="font-bold">₹4500</span> + First place certificate</span><hr class="my-4 dark:border-slate-800">
 				<span>Second place: <span class="font-bold">₹3000</span> + Second place certificate</span><hr class="my-4 dark:border-slate-800">
 				<span>Third place: <span class="font-bold">₹2500</span> + Third place certificate</span>
@@ -52,7 +52,7 @@ import Footer from './components/Footer.vue'
 	<div id="rules" class="min-h-screen flex flex-col-reverse lg:flex-row lg:justify-between justify-center items-center dark:bg-slate-800 dark:text-white">
 		<div class="lg:mx-52 mx-8 flex flex-col gap-2 lg:gap-8 my-24">
 			<h1 class="lg:text-5xl text-2xl font-bold">Tournament rules</h1>
-			<ol class="lg:text-base text-lg font-thin flex flex-col list-decimal gap-4 ml-6 lg:ml-12"> 
+			<ol class="text-lg font-thin list-decimal ml-6 lg:ml-12"> 
 				<li>Every team is required to submit a single python file</li>
 				<li>
 					The program should have a `class BattleShip` with the following member variables
@@ -69,7 +69,7 @@ import Footer from './components/Footer.vue'
 						<li><span class="font-bold">set_board(self)</span> - Returns your 2D list of your ship</li>
 						<li><span class="font-bold">attack(self)</span> - Return a tuple of two integers. The two integers denotes the position of the board where you want to shoot.</li>
 						<li><span class="font-bold">hit_or_miss(self, x, y , info)</span> - Doesn't return anything. <br>
-								x and y is the co-ordinate at which you hit the enemy board. `info` contains information about the state of your attack.
+								x and y is the co-ordinate at which you hit the enemy board. <span class="font-bold">info</span> contains information about the state of your attack.
 								<ul class="list-disc ml-4">
 									<li>If info = 1 , it means you have missed your shot.</li>
 									<li>If info = 0 , it means you have hit an enemy ship</li>
