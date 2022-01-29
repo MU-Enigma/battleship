@@ -7,7 +7,7 @@ import Footer from './components/Footer.vue'
 
 <template>
 	<Header />
-	<div class="flex flex-col-reverse gap-12 lg:gap-0 lg:flex-row lg:justify-between justify-center items-center landing home">
+	<div class="flex flex-col-reverse gap-12 lg:gap-0 lg:flex-row lg:justify-between justify-center items-center landing home dark:bg-slate-900 dark:text-white">
 		<div class="lg:mx-52 mx-8 flex flex-col gap-2 lg:gap-5">
 			<h1 class="lg:text-5xl text-2xl font-bold">Enigma</h1>
 			<h2 class="lg:text-3xl text-xl">Battleship Challenge</h2>
@@ -23,7 +23,7 @@ import Footer from './components/Footer.vue'
 		<img src="./assets/landing_bin.svg" class="w-4/5 lg:w-2/5 lg:mr-32 select-none" />
 	</div>
 
-	<div id="about" class="h-screen flex flex-col-reverse lg:flex-row lg:justify-between justify-center items-center">
+	<div id="about" class="h-screen flex flex-col-reverse lg:flex-row lg:justify-between justify-center items-center dark:bg-slate-800 dark:text-white">
 		<div class="lg:mx-52 mx-8 flex flex-col gap-2 lg:gap-8">
 			<h1 class="lg:text-5xl text-2xl font-bold">Overview</h1>
 			<h3 class="lg:text-2xl text-lg font-thin">
@@ -35,21 +35,21 @@ import Footer from './components/Footer.vue'
 		</div>
 	</div>
 
-	<div id="prizes" class="h-screen flex flex-col-reverse lg:flex-row lg:justify-between justify-center items-center landing">
+	<div id="prizes" class="h-screen flex flex-col-reverse lg:flex-row lg:justify-between justify-center items-center landing dark:bg-slate-900 dark:text-white">
 		<div class="lg:mx-52 mx-8 flex flex-col gap-2 lg:gap-8">
 			<h1 class="lg:text-5xl text-2xl font-bold">Prizes</h1>
 			<h3 class="lg:text-xl text-lg font-thin flex flex-col">
 				<span class="pb-4">Cash prizes will be transferred via UPI to the wallets of respective winners. <br>
 					In case the recipients do not have UPI wallets, an alternative would be arranged.</span>
-				<span>All certificates will be signed by Prafulla ma'am, the Club’s mentor</span><hr class="my-4">
-				<span>Winner: <span class="font-bold">₹4500</span> + First place certificate</span><hr class="my-4">
-				<span>Second place: <span class="font-bold">₹3000</span> + Second place certificate</span><hr class="my-4">
+				<span>All certificates will be signed by Prafulla ma'am, the Club’s mentor</span><hr class="my-4 dark:border-slate-800">
+				<span>Winner: <span class="font-bold">₹4500</span> + First place certificate</span><hr class="my-4 dark:border-slate-800">
+				<span>Second place: <span class="font-bold">₹3000</span> + Second place certificate</span><hr class="my-4 dark:border-slate-800">
 				<span>Third place: <span class="font-bold">₹2500</span> + Third place certificate</span>
 			</h3>
 		</div>
 	</div>
 
-	<div id="rules" class="min-h-screen flex flex-col-reverse lg:flex-row lg:justify-between justify-center items-center">
+	<div id="rules" class="min-h-screen flex flex-col-reverse lg:flex-row lg:justify-between justify-center items-center dark:bg-slate-800 dark:text-white">
 		<div class="lg:mx-52 mx-8 flex flex-col gap-2 lg:gap-8 my-24">
 			<h1 class="lg:text-5xl text-2xl font-bold">Tournament rules</h1>
 			<ol class="lg:text-base text-lg font-thin flex flex-col list-decimal gap-4 ml-6 lg:ml-12"> 
@@ -99,7 +99,7 @@ import Footer from './components/Footer.vue'
 		</div>
 	</div>
 
-	<div id="touch" class="h-screen flex flex-col-reverse lg:flex-row lg:justify-between justify-center items-center landing">
+	<div id="touch" class="h-screen flex flex-col-reverse lg:flex-row lg:justify-between justify-center items-center landing dark:bg-slate-900 dark:text-white">
 		<div class="lg:mx-52 mx-8 flex flex-col gap-2 lg:gap-8">
 			<h1 class="lg:text-5xl text-2xl font-bold">Get in Touch</h1>
 			<h2 class="lg:text-2xl text-lg font-thin flex flex-col">
@@ -120,6 +120,7 @@ import Footer from './components/Footer.vue'
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
 
 body {
 	margin: 0;
@@ -142,5 +143,24 @@ body {
 
 .home {
 	height: calc(100vh - 72px);
+}
+
+@media (prefers-color-scheme: dark) {
+	* {
+		scrollbar-color: rgb(30, 41, 59) rgb(18, 26, 45);
+	}
+
+	body {
+		background: black;
+	}
+
+	::-webkit-scrollbar {
+		width: 8px;
+		background: rgb(18, 26, 45);
+	}
+
+	::-webkit-scrollbar-thumb {
+			background: rgb(30, 41, 59);
+	}
 }
 </style>
