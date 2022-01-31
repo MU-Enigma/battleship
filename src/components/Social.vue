@@ -4,7 +4,7 @@
 			<img src="./assets/github.svg" class="dark:hidden">
 			<img src="./assets/github-dark.svg" class="hidden dark:block">
 		</a>
-		<a href="" class="hidden">
+		<a href="https://www.linkedin.com/company/mu-enigma/">
 			<img src="./assets/linkedlin.svg" class="dark:hidden">
 			<img src="./assets/linkedlin-dark.svg" class="hidden dark:block">
 		</a>
