@@ -1,5 +1,5 @@
 <template>
-	<header class="flex justify-between items-center px-8 py-5 z-40 dark:bg-slate-800 dark:text-white" :class="{'sticky -top-0 backdrop-filter backdrop-blur nav-scroll-bg': !overflow, 'fixed w-screen': overflow}">
+	<header class="flex justify-between items-center px-8 py-5 z-40 dark:bg-slate-800/60 dark:text-white" :class="{'sticky -top-0 backdrop-filter backdrop-blur nav-scroll-bg': !overflow, 'fixed w-screen': overflow}">
 		<a href="/">
 			<img src="../assets/enigma.svg" class="lg:w-auto w-6 select-none dark:hidden" />
 			<img src="../assets/enigma-dark.svg" class="lg:w-auto w-6 select-none hidden dark:block" />
@@ -7,7 +7,7 @@
 		<ul class="lg:flex hidden gap-6">
 			<span class="hover:underline transition ease-in-out duration-300 cursor-pointer" v-scroll-to="`#about`"><li>About</li></span>
 			<span class="hover:underline transition ease-in-out duration-300 cursor-pointer" v-scroll-to="`#prizes`"><li>Prizes</li></span>
-			<span class="hover:underline transition ease-in-out duration-300 cursor-pointer" v-scroll-to="`#rules`"><li>Rules</li></span>
+			<span class="hover:underline transition ease-in-out duration-300 cursor-pointer" v-scroll-to="`#rules`"><li>FAQ</li></span>
 			<span class="hover:underline transition ease-in-out duration-300 cursor-pointer" v-scroll-to="`#touch`"><li>Get in Touch</li></span>
 		</ul>
 		<div class="block lg:hidden" @click="overflow = !overflow">
@@ -33,7 +33,7 @@
 			<ul class="flex flex-col gap-12 dark:text-white">
 				<span class="hover:underline transition ease-in-out duration-300 cursor-pointer" v-scroll-to="`#about`"><li>About</li></span>
 				<span class="hover:underline transition ease-in-out duration-300 cursor-pointer" v-scroll-to="`#prizes`"><li>Prizes</li></span>
-				<span class="hover:underline transition ease-in-out duration-300 cursor-pointer" v-scroll-to="`#rules`"><li>Rules</li></span>
+				<span class="hover:underline transition ease-in-out duration-300 cursor-pointer" v-scroll-to="`#rules`"><li>FAQ</li></span>
 				<span class="hover:underline transition ease-in-out duration-300 cursor-pointer" v-scroll-to="`#touch`"><li>Get in Touch</li></span>
 			</ul>
 		</div>
@@ -57,13 +57,13 @@ header {
 }
 
 .over-flow {
-	background: rgba(256, 256, 256, 1);
+	background: rgba(256, 256, 256, 0.6);
 	margin-top: 64px;
-	height: calc(100vh - 72px);
+	height: calc(100vh - 64px);
 }
 
 .nav-scroll-bg {
-	background: rgba(256, 256, 256, 1);
+	background: rgba(256, 256, 256, 0.6);
 }
 
 @media (prefers-color-scheme: dark) {

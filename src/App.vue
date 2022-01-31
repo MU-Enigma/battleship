@@ -7,12 +7,14 @@ import Footer from './components/Footer.vue'
 
 <template>
 	<Header />
+
+	<!-- Landing -->
 	<div class="flex flex-col-reverse gap-12 lg:gap-0 lg:flex-row lg:justify-between justify-center items-center landing home dark:bg-slate-900 dark:text-white">
 		<div class="lg:mx-52 mx-8 flex flex-col gap-2 lg:gap-5">
 			<h1 class="lg:text-5xl text-2xl font-bold">Enigma</h1>
 			<h2 class="lg:text-2xl text-xl">Code Wars 0: Battleships</h2>
 			<h3 class="lg:text-xl text-lg font-thin">Fight your battles with artillery and code</h3>
-			<h2 class="lg:text-2xl text-xl">Jan 31 - Feb 7</h2>
+			<h2 class="lg:text-2xl text-xl">Feb 3 - Feb 10</h2>
 			<br>
 			<a href="https://github.com/MU-Enigma/BattleShip-BattleGround/tree/master/Battleship/Submissions">
 				<div class="lg:p-6 p-2 lg:w-60 w-32 flex justify-center uppercase lg:text-2xl text-sm items-center lg:rounded-3xl rounded-xl text-white button cursor-pointer transform hover:scale-95 ease-in-out duration-300 shadow-md">
@@ -23,6 +25,7 @@ import Footer from './components/Footer.vue'
 		<img src="./assets/landing_bin.svg" class="w-4/5 lg:w-2/5 lg:mr-32 select-none" />
 	</div>
 
+	<!-- About -->
 	<div id="about" class="min-h-screen flex flex-col-reverse lg:flex-row lg:justify-between justify-center items-center dark:bg-slate-800 dark:text-white">
 		<div class="lg:mx-52 mx-8 flex flex-col gap-2 lg:gap-8 my-24">
 			<h1 class="lg:text-5xl text-2xl font-bold">Overview</h1>
@@ -35,6 +38,7 @@ import Footer from './components/Footer.vue'
 		</div>
 	</div>
 
+	<!-- Prizes -->
 	<div id="prizes" class="h-screen flex flex-col-reverse lg:flex-row lg:justify-between justify-center items-center landing dark:bg-slate-900 dark:text-white">
 		<div class="lg:mx-52 mx-8 flex flex-col gap-2 lg:gap-8">
 			<h1 class="lg:text-5xl text-2xl font-bold">Prizes</h1>
@@ -49,29 +53,30 @@ import Footer from './components/Footer.vue'
 		</div>
 	</div>
 
+	<!-- FAQ -->
 	<div id="rules" class="min-h-screen flex flex-col-reverse lg:flex-row lg:justify-between justify-center items-center dark:bg-slate-800 dark:text-white">
-		<div class="lg:mx-52 mx-8 flex flex-col gap-2 lg:gap-8 my-24">
-			<h1 class="lg:text-5xl text-2xl font-bold">Tournament rules</h1>
-			<ol class="text-lg font-thin list-decimal ml-6 lg:ml-12"> 
+		<div class="lg:mx-52 mx-8 flex flex-col gap-2 lg:gap-8 my-40">
+			<h1 class="lg:text-5xl text-2xl font-bold">How to Play</h1>
+			<ol class="flex flex-col gap-7 text-lg font-thin list-decimal ml-6 lg:ml-12"> 
 				<li>Every team is required to submit a single python file</li>
 				<li>
-					The program should have a `class BattleShip` with the following member variables
-					<ul class="list-disc">
-						<li><span class="font-bold">team_name: str</span> - Name of your team</li>
-						<li><span class="font-bold">board : list(int)</span> - 2D list indicating the position of your ships</li>
-						<li><span class="font-bold">opponent_board</span> : list(int) - 2D list for tracking enemy ships</li>
-						<li><span class="font-bold">info : int</span> - Contains details about your attack</li>
+					The program should have a <span class="font-bold bg-slate-100 dark:bg-slate-900 py-1 px-2 rounded-lg">class BattleShip</span> with the following member variables
+					<ul class="list-disc ml-5 leading-10">
+						<li><span class="font-bold bg-slate-100 dark:bg-slate-900 py-1 px-2 rounded-lg">team_name: str</span> - Name of your team</li>
+						<li><span class="font-bold bg-slate-100 dark:bg-slate-900 py-1 px-2 rounded-lg">board : list(int)</span> - 2D list indicating the position of your ships</li>
+						<li><span class="font-bold bg-slate-100 dark:bg-slate-900 py-1 px-2 rounded-lg">opponent_board</span> : list(int) - 2D list for tracking enemy ships</li>
+						<li><span class="font-bold bg-slate-100 dark:bg-slate-900 py-1 px-2 rounded-lg">info : int</span> - Contains details about your attack</li>
 					</ul>
 				</li>
 				<li>
 					Member Functions:
-					<ul class="list-disc">
-						<li><span class="font-bold">set_board(self)</span> - Returns your 2D list of your ship</li>
-						<li><span class="font-bold">attack(self)</span> - Return a tuple of two integers. The two integers denotes the position of the board where you want to shoot.</li>
-						<li><span class="font-bold">hit_or_miss(self, x, y , info)</span> - Doesn't return anything. <br>
+					<ul class="flex flex-col gap-4 list-disc ml-5 mt-3">
+						<li><span class="font-bold bg-slate-100 dark:bg-slate-900 py-1 px-2 rounded-lg">set_board(self)</span> - Returns your 2D list of your ship</li>
+						<li><span class="font-bold bg-slate-100 dark:bg-slate-900 py-1 px-2 rounded-lg">attack(self)</span> - Return a tuple of two integers. The two integers denotes the position of the board where you want to shoot.</li>
+						<li><span class="font-bold bg-slate-100 dark:bg-slate-900 py-1 px-2 rounded-lg">hit_or_miss(self, x, y , info)</span> - Doesn't return anything <br>
 								x and y is the co-ordinate at which you hit the enemy board. <span class="font-bold">info</span> contains information about the state of your attack.
-								<ul class="list-disc ml-4">
-									<li>If info = 1 , it means you have missed your shot.</li>
+								<ul class="list-disc ml-5">
+									<li>If info = 1 , it means you have missed your shot</li>
 									<li>If info = 0 , it means you have hit an enemy ship</li>
 									<li>If info = -1 , it means you have attempted to shoot at a place outside the dimensions of the enemy board</li>
 									<li>If info = 2, it means you have availed <span class="font-bold">Nullify</span> special Shot (More on Special Shot later)</li>
@@ -85,13 +90,45 @@ import Footer from './components/Footer.vue'
 				<li>
 					Special Moves:<br>
 					In your opponent's board, two randomly selected tile/co-ordinates will be assigned with special spot. The special spot are always in one of the ships. So, when you hit this special part of the ship, you get to use one of the following special moves:
-					<ul class="list-disc">
-						<li><span class="font-bold">Nullify</span> : Pretty Self Explanatory. It nullifies your opponent's next chance and hence gives you double hit.</li>
-						<li><span class="font-bold">Missile Hawkeye</span> : When you activate missile hawkeye, the next time you hit any co-ordinate say (x,y) , you get to eliminate the entire row and column.</li>
+					<ul class="flex flex-col gap-4 list-disc ml-5 mt-3">
+						<li><span class="font-bold bg-slate-100 dark:bg-slate-900 py-1 px-2 rounded-lg">Nullify</span> : Pretty Self Explanatory. It nullifies your opponent's next chance and hence gives you double hit.</li>
+						<li><span class="font-bold bg-slate-100 dark:bg-slate-900 py-1 px-2 rounded-lg">Missile Hawkeye</span> : When you activate missile hawkeye, the next time you hit any co-ordinate say (x,y) , you get to eliminate the entire row and column.</li>
 						Note : When you activate missile Hawkeye, the very next move is treated as your special attack.
 					</ul>
 				</li>
-				<li>The board dimensions are 10x10.</li>
+				<li>The board is a 2D matrix of 1s and 0s<br>
+						How to Set Up Board :
+						<ul class="flex flex-col gap-4 list-disc ml-5 mt-3">
+							<li>There are 5 ships. One of size 3, two of size 4, and two of size 5.</li>
+							<li>The presence of a ship is determined by 1s in the matrix. So,<br>
+								<code class="block whitespace-pre bg-slate-100 dark:bg-slate-900 rounded-2xl p-3 mt-4">
+									board = [<br>
+											[1,1,1],<br>
+											[0,0,0],<br>
+											[1,1,1]<br>
+									]<br>
+								</code><br>
+								means there are two ship of size 3 at the first row and last row.<br>
+							</li>
+							<li>
+								The ships cannot be placed diagonally, but can be placed horizontally and Vertically only. Note that the ships cannot overlap!
+								<code class="block whitespace-pre bg-slate-100 dark:bg-slate-900 rounded-2xl p-3 mt-4">
+									board = [<br>
+											[1,0,0],<br>
+											[0,1,0],<br>
+											[0,0,1]<br>
+									]<br><br>
+									OR<br><br>
+									board = [<br>
+											[1,0,0],<br>
+											[0,0,1],<br>
+											[1,0,0]<br>
+									]<br>
+								</code><br>
+								are not a valid ship position of a ship!
+							</li>
+						</ul>
+				</li>
 				<li>The following link redirects you to a <a href="https://github.com/MU-Enigma/BattleShip-BattleGround/blob/master/Battleship/example_submission/team1.py" class="underline">sample code</a> that every team is expected to submit.
 						You may use the same as a boiler plate for your code submission.</li>
 				<li>Know more about the classic <a href="https://www.youtube.com/watch?v=RY4nAyRgkLo" class="underline">BattleShip Game</a>.</li>
@@ -99,6 +136,7 @@ import Footer from './components/Footer.vue'
 		</div>
 	</div>
 
+	<!-- Get in touch -->
 	<div id="touch" class="h-screen flex flex-col-reverse lg:flex-row lg:justify-between justify-center items-center landing dark:bg-slate-900 dark:text-white">
 		<div class="lg:mx-52 mx-8 flex flex-col gap-2 lg:gap-8">
 			<h1 class="lg:text-5xl text-2xl font-bold">Get in Touch</h1>
@@ -142,7 +180,7 @@ body {
 }
 
 .home {
-	height: calc(100vh - 72px);
+	height: calc(100vh - 64px);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -151,7 +189,7 @@ body {
 	}
 
 	body {
-		background: black;
+		background: rgb(15, 23, 42);
 	}
 
 	::-webkit-scrollbar {
