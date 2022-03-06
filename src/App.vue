@@ -100,23 +100,32 @@ import Footer from './components/Footer.vue'
 						How to Set Up Board :
 						<ul class="flex flex-col gap-4 list-disc ml-5 mt-3">
 							<li>There are 5 ships. One of size 3, two of size 4, and two of size 5.</li>
-							<li>The presence of a ship is determined by 1s in the matrix. So,<br>
+							<li>The presence of a ship is determined by the ship arrays you have to input. So,<br>
 								<code class="block whitespace-pre bg-slate-100 dark:bg-slate-900 rounded-2xl p-3 mt-4">
 									board = [<br>
-											[1,1,1],<br>
-											[0,0,0],<br>
-											[1,1,1]<br>
+											[3, 3, 3, 1],<br>
+											[4, 3, 4, 0],<br>
+											[5, 8, 4, 0]<br>
+											[1, 1, 5, 1]<br>
+											[9, 1, 5, 1]
 									]<br>
 								</code><br>
-								means there are two ship of size 3 at the first row and last row.<br>
+								means there are 5 ships.<br>
+								The first two parameters represent the row and column numbers, respectively.<br>
+								The third parameter represents the size of the ship.<br>
+								Lastly, the last parameter represents the orientation of the ship, 0 is for vertical and 1 is for horizontal.
+
+
 							</li>
 							<li>
 								The ships cannot be placed diagonally, but can be placed horizontally and Vertically only. Note that the ships cannot overlap!
 								<code class="block whitespace-pre bg-slate-100 dark:bg-slate-900 rounded-2xl p-3 mt-4">
 									board = [<br>
-											[1,0,0],<br>
-											[0,1,0],<br>
-											[0,0,1]<br>
+											[1, 0, 3, 0],<br>
+											[5, 2, 4, 0],<br>
+											[6, 4, 4, 1]<br>
+											[4, 4, 5, 1]<br>
+											[0, 1, 5, 1]<br>
 									]<br><br>
 									OR<br><br>
 									board = [<br>
