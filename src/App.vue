@@ -63,7 +63,7 @@ import Footer from './components/Footer.vue'
 					The program should have a <span class="font-bold bg-slate-100 dark:bg-slate-900 py-1 px-2 rounded-lg">class BattleShip</span> with the following member variables
 					<ul class="list-disc ml-5 leading-10">
 						<li><span class="font-bold bg-slate-100 dark:bg-slate-900 py-1 px-2 rounded-lg">team_name: str</span> - Name of your team</li>
-						<li><span class="font-bold bg-slate-100 dark:bg-slate-900 py-1 px-2 rounded-lg">board : list(int)</span> - 2D list indicating the position of your ships</li>
+						<li><span class="font-bold bg-slate-100 dark:bg-slate-900 py-1 px-2 rounded-lg">ships : list(list(int))</span> - 2D list of lists indicating the positions of your ships</li>
 						<li><span class="font-bold bg-slate-100 dark:bg-slate-900 py-1 px-2 rounded-lg">opponent_board</span> : list(int) - 2D list for tracking enemy ships</li>
 						<li><span class="font-bold bg-slate-100 dark:bg-slate-900 py-1 px-2 rounded-lg">info : int</span> - Contains details about your attack</li>
 					</ul>
@@ -71,7 +71,7 @@ import Footer from './components/Footer.vue'
 				<li>
 					Member Functions:
 					<ul class="flex flex-col gap-4 list-disc ml-5 mt-3">
-						<li><span class="font-bold bg-slate-100 dark:bg-slate-900 py-1 px-2 rounded-lg">set_board(self)</span> - Returns your 2D list of your ship</li>
+						<li><span class="font-bold bg-slate-100 dark:bg-slate-900 py-1 px-2 rounded-lg">set_ships(self)</span> - Returns your 2D list of your ships</li>
 						<li><span class="font-bold bg-slate-100 dark:bg-slate-900 py-1 px-2 rounded-lg">attack(self)</span> - Return a tuple of two integers. The two integers denotes the position of the board where you want to shoot.</li>
 						<li><span class="font-bold bg-slate-100 dark:bg-slate-900 py-1 px-2 rounded-lg">hit_or_miss(self, x, y , info)</span> - Doesn't return anything <br>
 								x and y is the co-ordinate at which you hit the enemy board. <span class="font-bold">info</span> contains information about the state of your attack.
@@ -92,17 +92,17 @@ import Footer from './components/Footer.vue'
 					In your opponent's board, two randomly selected tile/co-ordinates will be assigned with special spot. The special spot are always in one of the ships. So, when you hit this special part of the ship, you get to use one of the following special moves:
 					<ul class="flex flex-col gap-4 list-disc ml-5 mt-3">
 						<li><span class="font-bold bg-slate-100 dark:bg-slate-900 py-1 px-2 rounded-lg">Nullify</span> : Pretty Self Explanatory. It nullifies your opponent's next chance and hence gives you double hit.</li>
-						<li><span class="font-bold bg-slate-100 dark:bg-slate-900 py-1 px-2 rounded-lg">Missile Hawkeye</span> : When you activate missile hawkeye, the next time you hit any co-ordinate say (x,y) , you get to eliminate the entire row and column.</li>
+						<li><span class="font-bold bg-slate-100 dark:bg-slate-900 py-1 px-2 rounded-lg">Missile Hawkeye</span> : When you activate the missile hawkeye, the next time you hit any co-ordinate say (x,y) , you get to eliminate the entire row and column (sort of like a plus symbol).</li>
 						Note : When you activate missile Hawkeye, the very next move is treated as your special attack.
 					</ul>
 				</li>
 				<li>The board is a 2D matrix of 1s and 0s<br>
-						How to Set Up Board :
+						How to Set Up Your Ships :
 						<ul class="flex flex-col gap-4 list-disc ml-5 mt-3">
 							<li>There are 5 ships. One of size 3, two of size 4, and two of size 5.</li>
-							<li>The presence of a ship is determined by the ship arrays you have to input. So,<br>
+							<li>The presence of a ship is determined by the ship array you have to input. So,<br>
 								<code class="block whitespace-pre bg-slate-100 dark:bg-slate-900 rounded-2xl p-3 mt-4">
-									board = [<br>
+									ships = [<br>
 											[3, 3, 3, 1],<br>
 											[4, 3, 4, 0],<br>
 											[5, 8, 4, 0]<br>
@@ -113,28 +113,12 @@ import Footer from './components/Footer.vue'
 								means there are 5 ships.<br>
 								The first two parameters represent the row and column numbers, respectively.<br>
 								The third parameter represents the size of the ship.<br>
-								Lastly, the last parameter represents the orientation of the ship, 0 is for vertical and 1 is for horizontal.
+								Lastly, the last parameter represents the orientation of the ship, 0 is for vertical and 1 is for horizontal (the tiles get added towards the right (horizontal) or towards the bottom (vertical)).
 
 
 							</li>
 							<li>
 								The ships cannot be placed diagonally, but can be placed horizontally and Vertically only. Note that the ships cannot overlap!
-								<code class="block whitespace-pre bg-slate-100 dark:bg-slate-900 rounded-2xl p-3 mt-4">
-									board = [<br>
-											[1, 0, 3, 0],<br>
-											[5, 2, 4, 0],<br>
-											[6, 4, 4, 1]<br>
-											[4, 4, 5, 1]<br>
-											[0, 1, 5, 1]<br>
-									]<br><br>
-									OR<br><br>
-									board = [<br>
-											[1,0,0],<br>
-											[0,0,1],<br>
-											[1,0,0]<br>
-									]<br>
-								</code><br>
-								are not a valid ship position of a ship!
 							</li>
 						</ul>
 				</li>
