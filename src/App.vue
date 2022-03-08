@@ -14,7 +14,7 @@ import Footer from './components/Footer.vue'
 			<h1 class="lg:text-5xl text-2xl font-bold">Enigma</h1>
 			<h2 class="lg:text-2xl text-xl">Code Wars 0: Battleships</h2>
 			<h3 class="lg:text-xl text-lg font-thin">Fight your battles with artillery and code</h3>
-			<h2 class="lg:text-2xl text-xl">Feb 3 - Feb 10</h2>
+			<h2 class="lg:text-2xl text-xl">Mar 8 - Mar 15</h2>
 			<br>
 			<a href="https://github.com/MU-Enigma/BattleShip-BattleGround/tree/master/Battleship/Submissions">
 				<div class="lg:p-6 p-2 lg:w-60 w-32 flex justify-center uppercase lg:text-2xl text-sm items-center lg:rounded-3xl rounded-xl text-white button cursor-pointer transform hover:scale-95 ease-in-out duration-300 shadow-md">
@@ -111,7 +111,7 @@ import Footer from './components/Footer.vue'
 									]<br>
 								</code><br>
 								means there are 5 ships.<br>
-								The first two parameters represent the row and column numbers, respectively.<br>
+								The first two parameters represent the row and column numbers of the first co-ordinate of the ship, respectively.<br>
 								The third parameter represents the size of the ship.<br>
 								Lastly, the last parameter represents the orientation of the ship, 0 is for vertical and 1 is for horizontal (the tiles get added towards the right (horizontal) or towards the bottom (vertical)).
 
