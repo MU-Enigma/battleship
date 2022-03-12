@@ -20,5 +20,9 @@
 			<img src="./assets/instagram.svg" class="dark:hidden">
 			<img src="./assets/instagram-dark.svg" class="hidden dark:block">
 		</a>
+		<a href="https://twitter.com/muenigmatwt/">
+			<img src="./assets/twitter.svg" class="dark:hidden">
+			<img src="./assets/twitter-dark.svg" class="hidden dark:block">
+		</a>
 	</div>
 </template>
